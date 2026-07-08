@@ -1,0 +1,42 @@
+Gontse_TechSolutions_Ltd – Small Business Office Network
+
+
+
+Project Overview:
+
+This project simulates the network infrastructure of Gontse_TechSolutions_Ltd, a fictional small business with three departments: Administration, Sales, and IT. The objective is to design and configure a secure, scalable, and well-organized office network using Cisco Packet Tracer while implementing common networking technologies found in real business environments.
+
+The network is segmented using 'Virtual Local Area Networks (VLANs)' to improve security, reduce broadcast traffic, and logically separate each department. A dedicated 'Voice VLAN' is also implemented to support IP telephony.
+
+Inter-VLAN communication is achieved using 'Router-on-a-Stick', allowing devices in different departments to communicate through a single router connected to the switch via an IEEE 802.1Q trunk link.
+
+To simplify network administration, a 'centralized DHCP server' dynamically assigns IP addresses to employee computers and IP phones. Critical infrastructure devices such as the router interfaces, DHCP server, web server, and network printers use static IP addresses to ensure reliable connectivity and easier management.
+
+
+
+The network includes:
+
+1 Cisco 1841 Router configured for Router-on-a-Stick inter-VLAN routing.
+1 Cisco Layer 2 Switch configured with VLANs, trunking, access ports, and Voice VLANs.
+1 DHCP Server providing centralized IP address allocation for all user devices.
+1 Internal Web Server hosting a company webpage accessible across the network.
+6 Desktop PCs, with two users in each department, receiving IP addresses via DHCP.
+6 IP Phones, connected using a dedicated Voice VLAN to simulate enterprise VoIP deployment.
+3 Network Printers, one per department, configured with static IP addresses.
+
+
+
+VLAN Structure:
+
+| VLAN | Department     | Network         |
+| ---- | -------------- | --------------- |
+| 10   | Administration | 192.168.10.0/24 |
+| 20   | Sales          | 192.168.20.0/24 |
+| 30   | IT & Servers   | 192.168.30.0/24 |
+| 40   | Voice          | 192.168.40.0/24 |
+
+
+
+Project Objectives:
+
+The primary objective of this project is to demonstrate the design and implementation of a realistic small business network. It showcases core networking concepts that are commonly used in enterprise environments, including network segmentation, centralized IP address management, inter-VLAN routing, and the integration of user devices, servers, printers, and IP phones into a single, functional network.
