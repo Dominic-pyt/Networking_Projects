@@ -1,0 +1,23 @@
+NetSecure_Ltd
+
+
+Project Overview:
+
+This project involved designing and implementing a secure enterprise network for NetSecure Ltd, connecting a Head Office (HQ) with three branch offices (Cape Town, Durban, and Pretoria) through a central ISP. The objective was to create a scalable and secure network infrastructure that enabled communication between all sites while providing controlled internet access through the HQ using various Network Address Translation (NAT) techniques and Access Control Lists (ACLs).
+
+
+The network includes:
+
+- 1 Cisco 2811 Router configured as the Head Office (HQ) router, acting as the central hub, internet gateway, and NAT device.
+- 4 Cisco 1841 Routers representing the ISP and three branch offices (Cape Town, Durban, and Pretoria), providing WAN connectivity between all sites.
+- 4 Cisco 2960-24TT Layer 2 Switches, one at each site, connecting local devices within their respective LANs.
+- 1 Internal Web Server hosted at the Head Office and configured for public accessibility using Static NAT.
+- 12 Desktop PCs, with three workstations at each site, configured with private IPv4 addressing for inter-branch communication.
+
+The network was successfully configured using OSPF as the dynamic routing protocol, allowing all branch offices to exchange routing information automatically and maintain full inter-site connectivity. Each location was assigned its own private IPv4 subnet, with an organised IP addressing scheme that ensured efficient routing and simplified network management.
+
+To enhance security, both Standard and Extended ACLs were implemented to control network traffic. Standard ACLs were used to restrict communication between specific branches based on source IP addresses, while Extended ACLs filtered traffic according to protocols and ports, allowing only authorised services such as HTTP and HTTPS while blocking unwanted traffic where required.
+
+Internet access was provided through the Head Office using a combination of Static NAT, Dynamic NAT, and Port Address Translation (PAT). Static NAT enabled external users to access the internal web server, Dynamic NAT provided limited public address allocation for internal hosts, and PAT allowed multiple devices to share a single public IP address for internet connectivity.
+
+Comprehensive testing was performed throughout the project, including connectivity verification using ping and traceroute, routing validation, ACL testing, and NAT translation verification. All core project objectives were successfully implemented, including enterprise routing, network segmentation, traffic filtering, and NAT configuration. The only remaining issue encountered was intermittent internet access for a small number of PCs, despite successful internal communication and correct routing between all sites. This issue is believed to be related to the final NAT or access configuration rather than the overall network design and does not affect the successful implementation of the project's primary learning objectives.
